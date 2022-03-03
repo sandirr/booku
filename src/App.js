@@ -4,14 +4,15 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import routes from './configs/routes';
 import pages from './components/Pages';
-import store from './store'
+import store from './store';
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route exact path={routes.HOME()} component={pages.Example} />
+          <Route exact path={routes.HOME()} component={pages.Home} />
+          <Route exact path={routes.FAV()} component={pages.Favorites} />
         </Switch>
       </Router>
     </Provider>
